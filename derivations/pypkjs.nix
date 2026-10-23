@@ -26,15 +26,15 @@ let
         abi = pyShortVersion;
         platform =
           ({
-            x86_64-linux = "manylinux_2_31_x86_64";
+            x86_64-linux = "manylinux_2_35_x86_64";
             x86_64-darwin = "macosx_13_0_x86_64";
             aarch64-darwin = "macosx_14_0_arm64";
           }).${stdenv.hostPlatform.system};
         hash =
           ({
-            x86_64-linux = "sha256-g0uXYbt/SdqLiHhHx2R0laLPbEX2niEkrg4/AkSTvBU=";
-            x86_64-darwin = "sha256-tT32EUqIaY7m84IM9GR26D7gnJpn3Z989YymopKCOLA=";
-            aarch64-darwin = "sha256-bLXodRruJIfMO18h6sbUWQQacYCneZQbZNtXNuJydu4=";
+            x86_64-linux = "sha256-wLJYx8WnnF8Z5ja5PuzpDTz5EJr5oRxTlL24B+1o4Eo=";
+            x86_64-darwin = "sha256-xL8wSMlqahVhhh2gx0voQseacTc9O+wNU8To9uqntug=";
+            aarch64-darwin = "sha256-b9vDqLGqlBBk7Al2pahXYfUOkJBGjOJ1wi0HdCk9Jmg=";
           }).${stdenv.hostPlatform.system};
       };
 

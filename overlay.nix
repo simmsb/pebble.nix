@@ -4,7 +4,7 @@ final: prev: {
       packageOverrides = final': prev': {
         libpebble2 = final'.callPackage ./derivations/libpebble2.nix { };
 
-        rsa = prev'.rsa.overrideAttrs {
+        rsa = prev'.rsa.overrideAttrs rec {
           version = "4.9.1";
           src = final.fetchFromGitHub {
             owner = "sybrenstuvel";
@@ -12,6 +12,13 @@ final: prev: {
             rev = "42b0e14ffbeeb9d99d1037e6440a2cc61780e4ea";
             hash = "sha256-iZ+BehQkdZJ1n9mz1SzK8a7NwQGSxbOz48OZ4qrbqOE=";
           };
+          postPatch = ''
+            substituteInPlace pyproject.toml --replace-fail "4.10-dev0" "${version}"
+          '';
+        };
+
+        websockify = prev'.websockify.overridePythonAttrs {
+          doCheck = false;
         };
       };
     in
