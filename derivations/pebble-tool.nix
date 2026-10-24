@@ -43,6 +43,8 @@ python3Packages.buildPythonPackage rec {
     hash = "sha256-wBsL9m4fWozUfTR1j0fPA2Dlg14yJTz+s5deRc2x5jE=";
   };
 
+  pythonRemoveDeps = ["rsa"];
+
   nativeBuildInputs = [ makeWrapper ];
 
   buildInputs = [ nodejs ];
@@ -66,7 +68,6 @@ python3Packages.buildPythonPackage rec {
     pyqrcode
     pyserial
     requests
-    rsa
     six
     sourcemap
     websocket-client
