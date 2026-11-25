@@ -11,8 +11,8 @@ buildGoModule {
   src = fetchFromGitHub {
     owner = "pebble-dev";
     repo = "bobby-assistant";
-    rev = "42a9b6fd20622854cb62dd8fecddcd0a8e7a05ae";
-    hash = "sha256-BFN9BYpEJc2B1Vh1taO8FWVrpFI5pS0ImcPFAGSH+pQ=";
+    rev = "4cb60f79deb133f36fbdba641100978490a7fc51";
+    hash = "sha256-7b8s0xeqOKSwFi4Im73u1ExK1NtQ7fjK+yMkHpKSUdw=";
   };
   sourceRoot = "source/tools/pdc-sequencer";
 

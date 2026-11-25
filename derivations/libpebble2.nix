@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "libpebble2";
-  version = "0.0.31";
+  version = "0.0.36";
   src = fetchFromGitHub {
     owner = "pebble-dev";
     repo = "libpebble2";
     tag = "v${version}";
-    hash = "sha256-4waUs0QeMI0dWL5Dk1HwL/5pK2uOfCFyJaK1MuRkuBw=";
+    hash = "sha256-0KWHkI0/mG9GathROhuOVN5/vrUN9i4WJlQEaIVcqoI=";
   };
 
   propagatedBuildInputs = [

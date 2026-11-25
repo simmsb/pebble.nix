@@ -9,15 +9,14 @@ jobs:
       matrix:
         os:
           - ubuntu-latest   # x86_64-linux
-          - macos-15-intel  # x86_64-darwin
           - macos-latest    # aarch64-darwin
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
-    - uses: canidae-solutions/lix-quick-install-action@v4
+    - uses: canidae-solutions/lix-quick-install-action@v5
 
-    - uses: cachix/cachix-action@v15
+    - uses: cachix/cachix-action@v17
       with:
         name: pebble
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
